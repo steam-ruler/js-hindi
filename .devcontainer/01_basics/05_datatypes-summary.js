@@ -32,3 +32,30 @@ const heros = ["ironman", "hulk", "thor"];
     console.log("Hello World");
     
  }
+
+ // *********************************************************************************************************
+
+ // Stack (Primitive), Heap (Non-Primitive)
+
+ let myYoutubeName = "The Math Sorcerer";
+
+ let anotherName = myYoutubeName;
+
+ anotherName = "code & coffee";
+ 
+ console.log(myYoutubeName)
+ console.log(anotherName);
+ 
+
+ let userOne = {
+   email: "user@google.com",
+   upi: "user@ybl",
+ }
+
+ let userTwo = userOne;
+
+ userTwo.email = "sam@google.com";
+
+ console.log(userOne.email);
+ console.log(userTwo.email);
+ 
