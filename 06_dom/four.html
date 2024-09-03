@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+
+<body style="background-color: #212121; color: #ffffff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+        document.querySelector(".language").appendChild(li)
+
+    }
+
+    addLanguage("python");
+    addLanguage("typescript");
+
+    function addOptiLanguage(langName) {
+        const li = document.createElement("li");
+        // const addText = document.createTextNode(langName);
+        // li.appendChild(addText);
+
+        li.appendChild(document.createTextNode(langName)); // or you can write the syntax as above line no. 26 ; But thsi syntax is more optimized
+        document.querySelector(".language").appendChild(li);
+
+    };
+
+    addOptiLanguage("golang");
+
+    // EDIT
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "Mojo"          // this is not optimized way
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondLang.replaceWith(newLi);
+
+
+    // edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>Swift</li>";
+
+
+    // remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+
+</html>
